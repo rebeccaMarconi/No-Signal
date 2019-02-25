@@ -1,0 +1,23 @@
+{
+	"name": "No Signal",
+	"description": "Break your browser.",
+	"version": "2.0",
+	"homepage_url": "https://www.youtube.com/watch?v=8E-MtJBAZvw",
+	"browser_action": {
+		"default_title": "NO SIGNAL",
+		"default_icon": "icon.png"
+	},
+	"permissions": [
+		"tabs",
+		"<all_urls>"
+	],
+	"background": {
+		"scripts": [ "background.js" ],
+		"persistent": true
+	},
+	"content_scripts": [{
+		"matches": [ "<all_urls>" ],
+		"js": [ "jquery-3.2.1.min.js" ]
+	}],
+	"manifest_version": 2
+}
